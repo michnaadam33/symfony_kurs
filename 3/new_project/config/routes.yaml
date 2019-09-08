@@ -1,0 +1,3 @@
+app_current_date_main:
+    path: /main
+    controller: App\Controller\CurrentDateController::main
