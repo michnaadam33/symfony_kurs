@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Osoby </h1>
+    <a href="{{ path('app_user_create') }}">Dodaj nową osobę</a>
+    <table>
+        <tr>
+            <td><h3>ID</h3></td>
+            <td><h3>Imię</h3></td>
+            <td><h3>Nazwisko</h3></td>
+            <td></td>
+            <td></td>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.surname }}</td>
+            <td><a href="{{ path('app_user_delete', {'id': user.id}) }}">Usuń</a> </td>
+            <td><a href="{{ path('app_user_edit', {'id': user.id}) }}">Edytuj</a> </td>
+        </tr>
+            {% else %}
+                <tr>
+            Brak osób
+                </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

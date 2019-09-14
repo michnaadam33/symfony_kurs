@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Witam {{ name }}</h1>
+    <h2>Twój szcześliwy numer to: {{ number }}</h2>
+    {% for name in personNames %}
+        <p>Pozdrowienia od <b>{{ name }}</b></p>
+    {% else %}
+        <p>Nikt nie pozdrawia</p>
+    {% endfor %}
+
+    {% if show is defined %}
+        <h2>Pokazałem się!!!</h2>
+    {% endif %}
+{% endblock %}
