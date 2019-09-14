@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Dodaj </h1>
+    {{ form_start(form) }}
+    <div class="form-control">
+        Imie:
+        {{ form_widget(form.name) }}
+        <div class="form-error">
+            <b>{{ form_errors(form.name) }}</b>
+        </div>
+        Nazwisko:
+        {{ form_widget(form.surname) }}
+        <div class="form-error">
+            <b>{{ form_errors(form.surname) }}</b>
+        </div>
+        Kraj:
+        {{ form_widget(form.country) }}
+        <div class="form-error">
+            <b>{{ form_errors(form.country) }}</b>
+        </div>
+        Kategoria:
+        {{ form_widget(form.category) }}
+        <div class="form-error">
+            <b>{{ form_errors(form.category) }}</b>
+        </div>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

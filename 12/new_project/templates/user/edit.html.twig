@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Edytuj osobę o ID: {{ user.id }} </h1>
+
+    <form method="post">
+        Imię: <br>
+        <input name="name" value="{{ user.name }}" required><br>
+        Nazwisko: <br>
+        <input name="surname" value="{{ user.surname }}"><br>
+        <input type="submit" value="Edytuj"/>
+    </form>
+{% endblock %}
