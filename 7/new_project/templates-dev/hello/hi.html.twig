@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Cześć {{ name }}</h1>
+    {% for name in personNames %}
+        <p>Pozdrowienia od <b>{{ name }}</b></p>
+    {% else %}
+        <p>Nikt nie pozdrawia</p>
+    {% endfor %}
+
+    {% if show is defined %}
+        <h2>Pokazałem się!!!</h2>
+    {% endif %}
+{% endblock %}
